@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2"
+        crossorigin="anonymous"></script>
+
+
+    <style>
+        body {
+             background-image: url(./image/corinne-kutz-tMI2_-r5Nfo-unsplash.jpg);
+             background-repeat: no-repeat;
+             background-size: cover;
+        }
+
+         h1 {
+            text-align: center;
+            color:red;
+            font-size: 35px;
+            font-style: oblique;
+        }
+        .register{
+            position: relative;
+            
+        }
+        .cl1{
+            height: 580px;
+            border-radius: 80px;
+            background-color:rgba(209, 198, 183, 0.54);
+           
+
+        }
+        .bi {
+            padding-left: 20px;
+            position: relative;
+           left:350px;
+          
+        }
+        .pas{
+            width: 460px;
+            position: relative;
+           left:350px;
+        }
+        .col-md-5{
+           position: relative;
+           left:350px;
+
+        }
+        .form-check{
+            position: relative;
+        top:10px;
+           left:350px;
+        }
+        /*#gg{
+position: relative;
+left:350px;
+        }*/
+        .requir{
+            display: none;
+            color:red;
+        }
+        .skk{
+            width:460px;
+            outline: none;
+            border: none;
+            border-radius: 4px;
+            height: 38px;
+            outline: none;
+            border: 2px solid transparent;
+        }
+        .gow{
+            position:relative;
+            left:350px;
+        }
+        .kalai{
+            color:rgb(9, 9, 245);
+            font-style: oblique;
+            font-size: 19px;
+        }
+        .thilak{
+            font-size: 30px;
+            color: blue;
+        }
+        .sathish{
+            font-size: 30px;
+            padding-left: 20px;
+            padding-right: 20px;
+            color:orange;
+        }
+        .saravana{
+            font-size: 37px;
+            color:#1d9bf0;;
+        }
+        .fa-brands{
+            position: relative;
+            left: 350px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="register">
+        <div class="container">
+            <div class="row align-items-start">
+                <div class="col cl1">
+                    <h1> E-TAIL SX Register Form</h1>
+                    <div class="pp">
+                        <a href="https://www.facebook.com/"><i class="fa-brands fa-facebook thilak"></i></a>
+                       <a href="https://www.google.com/"><i class="fa-brands fa-google sathish"></i></a>
+                       <a href="https://twitter.com/"><i class="fa-brands fa-twitter saravana"></i></a>
+                        <div class="gow">
+                            <label class="kalai">Name: </label><br>
+                            <input type="name" class="skk" onkeydown="return /[a-z]/i.test(event.key)" onkeyup="ab1()" id="pasu"
+                                placeholder="Enter your name">
+                                <span id="vish" class="requir">please enter your name</span>  
+                        </div>                        
+                        <div class="gow">
+                            <label class="kalai">Phone: </label><br>
+                            <input type="text" class="skk" maxlength="10" onkeydown="return /[0-9]/i.test(event.key)" minlength="10" id="pasup"
+                                placeholder="Enter your phonenumber">
+                                <span id="udh" class="requir">please enter your phonenumber</span>  
+                        </div> 
+                        <div class="gow">
+                            <label class="kalai">Email: </label><br>
+                            <input type="email" class="skk" onkeyup="ab3()" id="pasupat"
+                                placeholder="Enter your email">
+                                <span id="ka" class="requir">please enter your email</span>  
+                        </div>                        
+                        <div class="gow">
+                            <label class="kalai">Password: </label><br>
+                            <input type="password" class="skk" onkeyup="ab4()" id="pasupa"
+                                placeholder="Enter your password">
+                                <span id="kk" class="requir">please enter your password</span>  
+                        </div>
+                       
+                        <div class="col-5">
+                            <div class="form-check">
+                              <input class="form-check-input "onkeyup="ab5()"  name="container" type="checkbox" id="gridCheck">
+                              <label class="form-check-label" for="gridCheck">
+                            I agree
+                              </label>
+                              <span id="kka" class="requir">please select the field</span>  
+                            </div>
+                          </div><br>
+                        <div class="col-12" style=" display:flex;justify-content:center">
+                            <button type="submit" class="btn btn-primary" style="position:relative;top:20px"onclick="ab1(),ab2(),ab3(),ab4(),ab5()">Sign up</button>
+                            <a href="login.html"style="position:relative;left:20px;top:20px">already user?</a>
+                        </div>
+                           
+                    </div>
+                </div>
+              
+            </div>
+        </div>
+    </div>
+<script src="register.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+       /* let agegroup=[18,21,1,1,51,18,21,5,18,7,10];
+        
+        let pasupathi=agegroup.reduce((ajith,naveen)=>
+        {
+            if (ajith.indexOf(naveen)===-1){
+                ajith.push(naveen);
+            }
+            console.log(ajith)
+            console.log(naveen)
+            return ajith;
+            
+        },[]);
+        console.log(pasupathi);*/
+        let tt=[{id:1,item:"shirt",cost:40},
+        {id:2,item:"t-shirt",cost:80},
+        {id:3,item:"kid-shirt",cost:70}
+    ]
+let pp=((accumulator,current)=>
+accumulator+current.cost
+);
+let aa=tt.reduce(pp,10)
+console.log(aa);
+    </script>
+</body>
+</html>
+ 

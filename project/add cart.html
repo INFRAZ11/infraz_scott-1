@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>add cart</title>
+    <style>
+        body{
+            background-image: url(./image/avel-chuklanov-DUmFLtMeAbQ-unsplash.jpg);
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+        .pasu{
+            position: relative;
+            left: 400px;
+        }
+        /* body {
+              background-image: url(./image/alexander-kovacs-GMGdhtYeROY-unsplash.jpg);
+              background-repeat: no-repeat;
+              background-size: cover;
+          }
+   */
+          .main {
+              width: 100%;
+              /* height: 150px; */
+              background-color: rgba(0, 0, 0, 0.1);
+  
+          }
+  
+          .logo {
+              width: 150px;
+              margin: 10px;
+  
+          }
+  
+          .main ol {
+              float: right;
+              margin: 40px;
+  
+          }
+  
+          .main ol li {
+              display: inline;
+              padding: 30px;
+              font-size: 20px;
+          }
+  
+          a {
+              text-decoration: none;
+              color:blue;
+          }
+  
+          li a:hover {
+  
+              color:forestgreen;
+          }
+    </style>
+</head>
+<body>
+    <div class="main">
+        <img src="./img/IMG-20220525-WA0003.jpg" class="logo">
+        <ol>
+            <li><a href="project.html">home</a></li>
+            <li><a href="./about.html">about</a></li>
+            <li><a href="./product.html">product</a></li>
+            <li><a href="./add cart.html">add cart</a></li>
+            <li><a href="./services.html">services</a></li>
+            <li><a href="./contact.html">contact</a></li>
+        </ol>
+    </div>
+    <div class="pasu">
+    <h1 class="pathi" style="font-size:40px;font-style: oblique;color: blueviolet; position: relative;left: 100px;">Add cart</h1>
+    <div id="box">
+        
+        <button id="btn" style=width:100px;font-style:italic;background-color:blue;border:none;color:white;height:30px;margin-left:200px;cursor:pointer;border-radius:5px;>Add</button>
+
+    </div>
+</div>
+    <script>
+        var btn=document.querySelector("#btn");
+        btn.onclick=function(){
+            var div=document.createElement("div");
+            div.innerHTML=pasu();
+            document.getElementById("box").appendChild(div)
+        }
+        function pasu(){
+            return "<input type='text'style=width:300px;background-color:skyblue;border:none;color:red;height:30px;margin-top:40px;border-radius:5px;><button onclick='remove(this)'style=width:100px;font-style:italic;background-color:green;color:white;height:30px;border:none;margin-left:10px;border-radius:5px;cursor:pointer;>remove</button>"
+        }
+        function remove(btn)
+        {
+            document.getElementById("box").removeChild(btn.parentNode);
+        }
+    </script>
+
+</body>
+</html>

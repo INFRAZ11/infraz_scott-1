@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="form project.css">
+    <title>Form</title>
+</head>
+
+<body>
+    <h1>E-Tail SX Warehouse Form</h1>
+    <div class="pasupa">
+        <table class="pasu">
+            <div>
+                <tr class="things">
+                    <th class="warehouse">Product id:</th>
+                    <td><input type="text" class="form"></td>
+                </tr>
+                <tr class="things">
+                    <th class="warehouse">Product name:</th>
+                    <td><input type="text" class="form"></td>
+                </tr>
+                <tr class="things">
+                    <th class="warehouse">Brand name:</th>
+                    <td><input type="text" class="form"></td>
+                </tr>
+                <!-- <tr class="things">
+                    <th class="warehouse">Men:</th>
+                    <td><input type="text" class="form"></td>
+                </tr>
+                <tr class="things">
+                    <th class="warehouse">Women:</th>
+                    <td><input type="text" class="form"></td>
+                </tr>
+                <tr class="things">
+                    <th class="warehouse">Children:</th>
+                    <td><input type="text" class="form"></td>
+                </tr> -->
+                <tr class="things">
+                    <th class="warehouse">Men dress size:</th>
+                    <td><input type="text" class="form"></td>
+                </tr>
+                <tr class="things">
+                    <th class="warehouse">Women dress size:</th>
+                    <td><input type="text" class="form"></td>
+                </tr>
+                <tr class="things">
+                    <th class="warehouse">Children dress size:</th>
+                    <td><input type="text" class="form"></td>
+                </tr>
+                <tr class="things">
+                    <th class="warehouse">Men dress total Qty:</th>
+                    <td><input type="number" class="form"></td>
+                </tr>
+                <tr class="things">
+                    <th class="warehouse">Women dress total Qty:</th>
+                    <td><input type="number" class="form"></td>
+                </tr>
+                <tr class="things">
+                    <th class="warehouse">Children dress total Qty:</th>
+                    <td><input type="number" class="form"></td>
+                </tr>
+                <tr class="things">
+                    <th class="warehouse">Section:</th>
+                    <td><select id="sel" class="option">
+                            <option>--selectoption--</option>
+                            <option value="A">A</option>
+                            <option value="B">B</option>
+                            <option value="C">C</option>
+                            <option value="D">D</option>
+                            <option value="E">E</option>
+                            <option value="F">F</option>
+                            <option value="G">G</option>
+                            <option value="H">H</option>
+                            <option value="I">I</option>
+                            <option value="J">J</option>
+                        </select></td>
+                </tr>
+                <tr class="things">
+                    <th class="warehouse">Section Incharge Name:</th>
+                    <td>
+                        <select id="department" class="option">
+                            <option>--selectoption--</option>
+                        </select>
+                    </td>
+                </tr>
+                <!-- <tr class="things">
+                <th class="warehouse">Inners total Qty:</th>
+                <td><input type="number" class="form"></td>
+            </tr> -->
+                <tr class="things">
+                    <th class="warehouse">Total Qty:</th>
+                    <td><input type="number" class="form"></td>
+                </tr>
+                <tr class="things">
+                    <th class="warehouse">Total In:</th>
+                    <td><input type="number" class="form"></td>
+                </tr>
+                <tr class="things">
+                    <th class="warehouse">Total Out:</th>
+                    <td><input type="number" class="form"></td>
+                </tr>
+                <tr class="things">
+                    <th class="warehouse">Import date:</th>
+                    <td><input type="date" size="30" min="01-01-2020" max="01-01-2023" class="form"></td>
+                </tr>
+                <tr class="things">
+                    <th class="warehouse">Export date:</th>
+                    <td><input type="date" size="30" min="01-01-2020" max="01-01-2023" class="form"></td>
+                </tr>
+              
+            </div>
+        </table>
+        <button class="button">submit</button>
+    </div>
+    <script>
+        document.getElementById("sel").addEventListener("change", function () {
+            var Section = {
+                "A": ["ashok"],
+                "B": ["dheena"],
+                "C": ["saravana kumar"],
+                "D": ["pasupathi"],
+                "E": ["nirmal kumar"],
+                "F": ["suriyan"],
+                "G": ["sasi kumar"],
+                "H": ["vishnu"],
+                "I": ["prabhakaran"],
+                "J": ["sakthivel"]
+            };
+            var options = [];
+            Section[document.getElementById("sel").value].map((list) => {
+                options += "<option>" + list + "</option>"
+            })
+            document.getElementById("department").innerHTML = options
+        })
+    </script>
+</body>
+
+</html>

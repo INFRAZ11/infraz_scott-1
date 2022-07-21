@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>home</title>
+    <link rel="stylesheet" href="slide.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2"
+        crossorigin="anonymous"></script>
+        <style>
+            body {
+              background-image: url(./image/alexander-kovacs-GMGdhtYeROY-unsplash.jpg);
+              background-repeat: no-repeat;
+              background-size: cover;
+          }
+  
+          .main {
+              width: 100%;
+              /* height: 150px; */
+              background-color: rgba(0, 0, 0, 0.1);
+  
+          }
+  
+          .logo {
+              width: 150px;
+              margin: 10px;
+  
+          }
+  
+          .main ol {
+              float: right;
+              margin: 40px;
+  
+          }
+  
+          .main ol li {
+              display: inline;
+              padding: 30px;
+              font-size: 20px;
+          }
+  
+          a {
+              text-decoration: none;
+              color:blue;
+          }
+  
+          li a:hover {
+  
+              color:forestgreen;
+          }
+          .slider {
+            position: relative;
+            left: 300px;
+            top: 40px;
+            margin-bottom: 5em;
+        }
+
+        .spp {
+            position: relative;
+            top: 25px;
+            left: 1100px;
+            width: 100px;
+            height: 50px;
+
+        }
+
+        .suri {
+            border-radius: 10px;
+            background-color: cadetblue;
+            border: none;
+            outline: none;
+            font-style: oblique;
+            font-size: 15px;
+            font-weight: bold;
+
+        }
+
+        .nirmal {
+            margin-left: 20px;
+            background-color: aqua;
+            border-radius: 10px;
+            border: none;
+            outline: none;
+            font-style: oblique;
+            font-size: 15px;
+            font-weight: bold;
+        }
+
+        button a {
+            color: crimson;
+        }
+
+        .main{
+            position: sticky;
+            top:0;
+            left:0;
+            z-index: 1;
+        }
+        
+      </style>
+  </head>
+  <body>
+    <div class="main">
+        <img src="./img/IMG-20220525-WA0003.jpg" class="logo">
+        <ol>
+            <li><a href="project.html">home</a></li>
+            <li><a href="./about.html">about</a></li>
+            <li><a href="./product.html">product</a></li>
+            <li><a href="./add cart.html">add cart</a></li>
+            <li><a href="./services.html">services</a></li>
+            <li><a href="./contact.html">contact</a></li>
+        </ol>
+    </div>
+    <div class="pasupthi">
+        <button class="spp suri"><a href="register.html">Register</a></button>
+        <button class="spp nirmal"><a href="login.html" >Login</a></button>
+    </div>
+    <div class="slider">
+        <div class="slides">
+            <input type="radio" id="radio1" name="radios">
+            <input type="radio" id="radio2" name="radios">
+            <input type="radio" id="radio3" name="radios">
+            <input type="radio" id="radio4" name="radios">
+            <div class="slide fir">
+                <img src="./image/clothes-shop-shirt-hanged-stand-43380502.jpg">
+            </div>
+            <div class="slide">
+                <img src="./image/istockphoto-1023612090-612x612.jpg">
+            </div>
+            <div class="slide">
+                <img src="./image/nikola-duza-TSh8D8KutWU-unsplash.jpg">
+            </div>
+            <div class="slide">
+                <img src="./image/photo-1612423284934-2850a4ea6b0f.jfif">
+            </div>
+            <div class="auto">
+                <div class="auto1"></div>
+                <div class="auto2"></div>
+                <div class="auto3"></div>
+                <div class="auto4"></div>
+            </div>
+        </div>
+        <div class="manual">
+            <label for="radio1" class="manuals"></label>
+            <label for="radio2" class="manuals"></label>
+            <label for="radio3" class="manuals"></label>
+            <label for="radio4" class="manuals"></label>
+        </div>
+    </div>
+    <script>
+        var count = 1;
+        setInterval(() => {
+            document.getElementById('radio' + count).checked = true;
+            count = count + 1;
+            if (count > 4) {
+                count = 1
+            }
+        }, 3000);
+    </script>
+</body>
+</html>

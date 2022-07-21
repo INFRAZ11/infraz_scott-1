@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product table</title>
+    <style>
+        body{
+           background-color:bisque;
+        }
+        thead{
+            color: red;
+        }
+        td{
+            color:green;
+            font-size: 19px;
+        }
+    </style>
+    <link rel="stylesheet" href="https://cdn.datatables.net/1.12.1/css/jquery.dataTables.min.css">
+    <link rel="stylesheet" href="https://cdn.datatables.net/buttons/2.2.3/css/buttons.dataTables.min.css">
+    <script src=https://code.jquery.com/jquery-3.5.1.js></script>
+    <script src=https://cdn.datatables.net/1.12.1/js/jquery.dataTables.min.js></script>
+    <script src=https://cdn.datatables.net/buttons/2.2.3/js/dataTables.buttons.min.js></script>
+    <script src=https://cdnjs.cloudflare.com/ajax/libs/jszip/3.1.3/jszip.min.js></script>
+    <script src=https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.1.53/pdfmake.min.js></script>
+    <script src=https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.1.53/vfs_fonts.js></script>
+    <script src=https://cdn.datatables.net/buttons/2.2.3/js/buttons.html5.min.js></script>
+    <script src=https://cdn.datatables.net/buttons/2.2.3/js/buttons.print.min.js></script>
+</head>
+
+<body>
+    <table id="example" class="display nowrap" style="width:100%">
+        <thead>
+            <tr>
+                <th>Product Id</th>
+                <th>Product Manager Name</th>
+                <th>Product Name</th>
+                <th>Office</th>
+                <th>Total Qty</th>
+                <th>Qty IN</th>
+                <th>Qty OUT</th>
+                <th>Start Date</th>
+                <th>Total Price</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>GTIN-01</td>
+                <td>Tiger Nixon</td>
+                <td>Formals</td>
+                <td>Tiruppur</td>
+                <td>161</td>
+                <td>60</td>
+                <td>30</td>
+                <td>2021-11-29</td>
+                <td>$320,800</td>
+            </tr>
+            <tr>
+                <td>GTIN-02</td>
+                <td>Garrett Winters</td>
+                <td>Cashuals</td>
+                <td>Coimbatore</td>
+                <td>183</td>
+                <td>70</td>
+                <td>40</td>
+                <td>2022-07-05</td>
+                <td>$170,750</td>
+            </tr>
+            <tr>
+                <td>GTIN-03</td>
+                <td>Ashton Cox</td>
+                <td>Traditional</td>
+                <td>Eroad</td>
+                <td>266</td>
+                <td>86</td>
+                <td>30</td>
+                <td>2022-01-12</td>
+                <td>$86,000</td>
+            </tr>
+            <tr>
+                <td>GTIN-04</td>
+                <td>Cedric Kelly</td>
+                <td>Sarees</td>
+                <td>Chennai</td>
+                <td>222</td>
+                <td>80</td>
+                <td>38</td>
+                <td>2022-03-29</td>
+                <td>$433,060</td>
+            </tr>
+            <tr>
+                <td>GTIN-05</td>
+                <td>Airi Satou</td>
+                <td>Inners</td>
+                <td>Salem</td>
+                <td>233</td>
+                <td>92</td>
+                <td>55</td>
+                <td>2021-08-28</td>
+                <td>$162,700</td>
+            </tr>
+            <tr>
+                <td>GTIN-06</td>
+                <td>Brielle Williamson</td>
+                <td>T-shirt</td>
+                <td>Trichy</td>
+                <td>300</td>
+                <td>68</td>
+                <td>54</td>
+                <td>2021-12-02</td>
+                <td>$372,000</td>
+            </tr>
+            <tr>
+                <td>GTIN-07</td>
+                <td>Herrod Chandler</td>
+                <td>Cotton-shirt</td>
+                <td>Madurai</td>
+                <td>259</td>
+                <td>92</td>
+                <td>51</td>
+                <td>2021-11-06</td>
+                <td>$137,500</td>
+            </tr>
+            <tr>
+                <td>GTIN-08</td>
+                <td>Rhona Davidson</td>
+                <td>Cotton-phant</td>
+                <td>Eroad anthiyur</td>
+                <td>355</td>
+                <td>85</td>
+                <td>55</td>
+                <td>2022-02-14</td>
+                <td>$327,900</td>
+            </tr>
+            <tr>
+                <td>GTIN-09</td>
+                <td>Charde Marshall</td>
+                <td>Shorts</td>
+                <td>Tiruppur kumaran nagar</td>
+                <td>346</td>
+                <td>76</td>
+                <td>35</td>
+                <td>2022-06-16</td>
+                <td>$470,600</td>
+            </tr>
+            <tr>
+                <td>GTIN-10</td>
+                <td>Haley Kennedy</td>
+                <td>Jeans</td>
+                <td>Coimbatore saravanampatti</td>
+                <td>443</td>
+                <td>99</td>
+                <td>69</td>
+                <td>2021-12-18</td>
+                <td>$313,500</td>
+            </tr>
+            <tr>
+                <td>GTIN-11</td>
+                <td>Tatyana Fitzpatrick</td>
+                <td>Western</td>
+                <td>Karur</td>
+                <td>295</td>
+                <td>86</td>
+                <td>45</td>
+                <td>2022-03-17</td>
+                <td>$385,750</td>
+            </tr>
+            <tr>
+                <td>GTIN-12</td>
+                <td>Michael Silva</td>
+                <td>Cotton-saree</td>
+                <td>Thanjavur</td>
+                <td>466</td>
+                <td>76</td>
+                <td>43</td>
+                <td>2021-11-27</td>
+                <td>$198,500</td>
+            </tr>
+            <tr>
+                <td>GTIN-13</td>
+                <td>Paul Byrd</td>
+                <td>Party wears</td>
+                <td>Chennai ambattur</td>
+                <td>364</td>
+                <td>82</td>
+                <td>49</td>
+                <td>2022-06-09</td>
+                <td>$725,000</td>
+            </tr>
+            <tr><td>GTIN-14</td>
+                <td>Gloria Little</td>
+                <td>Kerala Sarees</td>
+                <td>Viluppuram</td>
+                <td>559</td>
+                <td>89</td>
+                <td>47</td>
+                <td>2022-04-10</td>
+                <td>$237,500</td>
+            </tr>
+            <tr>
+                <td>GTIN-15</td>
+                <td>Bradley Greer</td>
+                <td>Embroided items</td>
+                <td>Kadalur</td>
+                <td>441</td>
+                <td>90</td>
+                <td>55</td>
+                <td>2021-10-13</td>
+                <td>$132,000</td>
+            </tr>
+            <tr>
+                <td>GTIN-16</td>
+                <td>Dai Rios</td>
+                <td>Pyjamas</td>
+                <td>Thirunalveli</td>
+                <td>325</td>
+                <td>86</td>
+                <td>41</td>
+                <td>2021-09-26</td>
+                <td>$217,500</td>
+            </tr>
+            <tr>
+                <td>GTIN-17</td>
+                <td>Jenette Caldwell</td>
+                <td>Mixed metirials</td>
+                <td>Pandichery</td>
+                <td>300</td>
+                <td>102</td>
+                <td>65</td>
+                <td>2021-09-03</td>
+                <td>$345,000</td>
+            </tr>
+        </tbody>
+    </table>
+    <script>
+        $(document).ready(function() {
+        $('#example').DataTable( {
+            dom: 'Bfrtip',
+            buttons: [
+                'copy', 'csv', 'excel', 'pdf', 'print'
+            ]
+        } );
+    } );
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,50 @@
+ body{
+    background-image: url(./img/istockphoto-825680848-1024x1024.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+ }
+ .warehouse{
+    font-style: oblique;
+    color:blueviolet;
+    font-size: 25px;
+    position: relative;
+    left:380px;
+    line-height: 70px;
+    text-align: left;
+} 
+.form{
+    position: relative;
+    left: 400px;
+    width: 400px;
+    height: 35px;
+    border-radius: 5px;
+   outline: none;
+}
+/* .pasu{
+background-color: aqua;
+width:100px;
+border-radius: 50px;
+} */
+.option{
+    position: relative;
+    left: 400px;
+    width: 409px;
+    height: 35px;
+    border-radius: 5px;
+}
+h1{
+    font-style: oblique;
+    color: blue;
+    text-align: center;
+}
+button{
+    position: relative;
+    top:10px;
+    left: 600px;
+    width:90px;
+    height:40px;
+    border-radius: 7px;
+    background-color: brown;
+    color: aliceblue;
+    cursor: pointer;
+}
